@@ -34,18 +34,23 @@ const data = [{name: "Wayne Barnett", role: "Founder & CEO", photo: "wayne-barne
 
 console.log(data) //===> MILESTONE1
 
-targetPrint.innerText = data[0,1,2,3,4,5]
+
+//analisi. 
+//Voglio stampare tutte le informazioni dell'array. l'array è composto da sei elementi quindi ci giro dentro data.length volte.
+//per stampare i dati nel dom ho bisogno della stringa vuota da riempire ad ogni [i].
+//l'indice del mio array corrisponde ad i
 
 let arrayElement = ""
 
 for (let i = 0; i < data.length; i++) {
-	
-    arrayElement += data[i]
+	arrayElement = data[i]
+
+    console.log(data[i])
+    
+
+    for (let key in arrayElement) {
+
+        targetPrint.innerText += arrayElement[key]
 }
-
-targetPrint.innerText = arrayElement
-
-
-
-
-
+}
+console.log((arrayElement))
