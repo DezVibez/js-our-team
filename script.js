@@ -40,8 +40,8 @@ console.log(data) //===> MILESTONE1
 //analisi. 
 //Voglio stampare tutte le informazioni dell'array. l'array è composto da sei elementi quindi ci giro dentro data.length volte.
 //per stampare i dati nel dom ho bisogno della stringa vuota da riempire ad ogni [i].
-//l'indice del mio array corrisponde ad i
-// ma ogni array è un
+//l'indice del mio array corrisponde ad i.
+// ma ogni array è un oggetto quindi per stampare tutte le sue proprietà uso un for key annidato.
 
 let arrayElement = "" //stringa vuota per stampa
 
@@ -51,10 +51,15 @@ for (let i = 1; i < data.length + 1; i++) {
 	arrayElement = data[i]
 
     console.log(data[i])
+
+
+    targetTry.innerHTML +=`<img src="img/${arrayElement["photo"]}">` //bonus1
+    
+    
     
     //stampa TUTTE le coppie chiavi-valore dei singoli oggetti, negli array.
 
-    targetTry.innerHTML +=`<img src="img/${arrayElement["photo"]}">`
+    
 
     for (let key in arrayElement) {
 
