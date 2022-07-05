@@ -22,8 +22,10 @@ Angela Lopez  |	Social Media Manager |	angela-lopez-social-media-manager.jpg
 Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg */ 
 
+//funzione stampa foto 
 
 const targetPrint = document.getElementById("targetPrint")
+const targetTry = document.getElementById("targetTry")
 
 const data = [{name: "Wayne Barnett", role: "Founder & CEO", photo: "wayne-barnett-founder-ceo.jpg"}, 
             {name: "Angela Caroll", role: "Chief Editor", photo: "angela-caroll-chief-editor.jpg"},
@@ -39,18 +41,24 @@ console.log(data) //===> MILESTONE1
 //Voglio stampare tutte le informazioni dell'array. l'array è composto da sei elementi quindi ci giro dentro data.length volte.
 //per stampare i dati nel dom ho bisogno della stringa vuota da riempire ad ogni [i].
 //l'indice del mio array corrisponde ad i
+// ma ogni array è un
 
-let arrayElement = ""
+let arrayElement = "" //stringa vuota per stampa
 
-for (let i = 0; i < data.length; i++) {
+data[0]
+
+for (let i = 1; i < data.length + 1; i++) {
 	arrayElement = data[i]
 
     console.log(data[i])
     
+    //stampa TUTTE le coppie chiavi-valore dei singoli oggetti, negli array.
+
+    targetTry.innerHTML +=`<img src="img/${arrayElement["photo"]}">`
 
     for (let key in arrayElement) {
 
-        targetPrint.innerText += arrayElement[key]
+        targetPrint.innerHTML +=`${arrayElement[key]}<br>`
 }
 }
 console.log((arrayElement))
